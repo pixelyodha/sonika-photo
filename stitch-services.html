@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | Sonika Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-secondary-container": "#64625d",
+                            "primary-fixed": "#e5e2e1",
+                            "on-background": "#1b1c1c",
+                            "on-secondary": "#ffffff",
+                            "on-error-container": "#93000a",
+                            "on-tertiary": "#ffffff",
+                            "surface-container-low": "#f5f3f3",
+                            "on-surface": "#1b1c1c",
+                            "on-primary-container": "#858383",
+                            "error": "#ba1a1a",
+                            "tertiary-container": "#1a1c1a",
+                            "surface-container-highest": "#e3e2e2",
+                            "on-error": "#ffffff",
+                            "surface-bright": "#fbf9f9",
+                            "tertiary": "#000000",
+                            "on-surface-variant": "#444748",
+                            "on-primary-fixed-variant": "#474746",
+                            "primary": "#000000",
+                            "surface-container": "#efeded",
+                            "outline": "#747878",
+                            "background": "#fbf9f9",
+                            "surface-dim": "#dbdad9",
+                            "on-secondary-fixed-variant": "#484742",
+                            "surface-tint": "#5f5e5e",
+                            "inverse-on-surface": "#f2f0f0",
+                            "surface-container-high": "#e9e8e7",
+                            "on-primary": "#ffffff",
+                            "on-tertiary-fixed": "#1a1c1a",
+                            "surface-container-lowest": "#ffffff",
+                            "on-tertiary-fixed-variant": "#464745",
+                            "error-container": "#ffdad6",
+                            "tertiary-fixed": "#e3e2e0",
+                            "primary-container": "#1c1b1b",
+                            "on-secondary-fixed": "#1c1c17",
+                            "surface": "#fbf9f9",
+                            "secondary-fixed-dim": "#cac6bf",
+                            "secondary-fixed": "#e6e2db",
+                            "inverse-surface": "#303031",
+                            "inverse-primary": "#c8c6c5",
+                            "on-primary-fixed": "#1c1b1b",
+                            "outline-variant": "#c4c7c7",
+                            "on-tertiary-container": "#848482",
+                            "secondary": "#605e59",
+                            "tertiary-fixed-dim": "#c7c6c4",
+                            "secondary-container": "#e3dfd8",
+                            "surface-variant": "#e3e2e2",
+                            "primary-fixed-dim": "#c8c6c5"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "section-padding-desktop": "120px",
+                            "section-padding-mobile": "64px",
+                            "container-max-width": "1440px",
+                            "grid-gutter": "24px",
+                            "base": "8px"
+                    },
+                    "fontFamily": {
+                            "label-sm": ["Inter"],
+                            "headline-sm": ["Inter"],
+                            "display-lg": ["Inter"],
+                            "body-lg": ["Inter"],
+                            "headline-md": ["Inter"],
+                            "display-lg-mobile": ["Inter"],
+                            "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                            "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                            "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                            "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                            "body-lg": ["18px", { "lineHeight": "1.8", "fontWeight": "400" }],
+                            "headline-md": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                            "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        html { scroll-behavior: smooth; }
+        body { background-color: #fbf9f9; color: #1b1c1c; } /* Fallbacks */
+        
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 50%;
+            width: 100%;
+            height: 1px;
+            background-color: #e5e2e1;
+            z-index: 0;
+        }
+        .timeline-item:last-child .timeline-line::before {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full h-20 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 z-50 transition-all duration-300">
+<div class="flex justify-between items-center px-8 md:px-12 max-w-[1440px] mx-auto w-full h-full">
+<a class="font-headline-sm text-headline-sm tracking-tighter text-primary dark:text-on-primary hover:opacity-70 transition-opacity duration-300" href="#">
+                Sonika Studio
+            </a>
+<nav class="hidden md:flex space-x-8 items-center">
+<a class="font-body-md text-body-md uppercase tracking-widest text-secondary dark:text-secondary-fixed hover:text-primary transition-colors hover:opacity-70 duration-300" href="#">Home</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-secondary dark:text-secondary-fixed hover:text-primary transition-colors hover:opacity-70 duration-300" href="#">Portfolio</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-primary dark:text-on-primary font-bold border-b border-primary hover:opacity-70 duration-300" href="#">Services</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-secondary dark:text-secondary-fixed hover:text-primary transition-colors hover:opacity-70 duration-300" href="#">About</a>
+</nav>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300" href="#book">
+                Book Now
+            </a>
+<!-- Mobile Menu Toggle (Decorative for structure) -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="w-full py-section-padding-desktop px-8 md:px-12 max-w-[1440px] mx-auto flex flex-col items-center justify-center text-center min-h-[614px]">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 max-w-4xl">Our Specialized Services</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">
+                Delivering uncompromising quality through technical precision and artistic vision. We provide end-to-end photographic solutions tailored for brands that demand perfection.
+            </p>
+</section>
+<!-- Service Breakdown -->
+<section class="w-full py-section-padding-desktop px-8 md:px-12 max-w-[1440px] mx-auto space-y-32">
+<!-- Service 1: E-commerce -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter items-center">
+<div class="md:col-span-5 md:col-start-1 space-y-6 order-2 md:order-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">01</span>
+<h2 class="font-headline-md text-headline-md text-primary">E-commerce Product Shoots</h2>
+<p class="font-body-md text-body-md text-secondary">
+                        High-volume, impeccable white-background cataloging designed specifically for platforms like Amazon, Flipkart, and Myntra. We ensure strict adherence to marketplace guidelines while maintaining the visual integrity of your product.
+                    </p>
+<ul class="space-y-3 pt-4 border-t border-outline-variant/30">
+<li class="flex items-center text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">check</span> 24-Hour Turnaround
+                        </li>
+<li class="flex items-center text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">check</span> Exact Color Accuracy
+                        </li>
+<li class="flex items-center text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">check</span> Efficient Batch Processing
+                        </li>
+</ul>
+</div>
+<div class="md:col-span-6 md:col-start-7 order-1 md:order-2">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img alt="E-commerce product photography setup" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A minimalist product photography setup featuring a sleek smart watch resting on a pure white, seamless background. The lighting is bright, even, and high-key, casting very soft, diffused shadows to emphasize the product's clean lines and metallic textures. The overall aesthetic is extremely clean, professional, and optimized for e-commerce cataloging, relying on a palette of crisp whites and deep charcoal blacks with absolute color precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK4NIjJ8ietgLLT16KXoppdBerKkVJUkeMtRIrAxAaQDIhOFKQccy8ftwBkPnD7OHpTFxG_x2dw4JzvY5rXvkxs19ptgCaE3Ecy61XGKI2uMxbbRhybwX7bFIYhCyg8FERw3LjNLQb4qnYsYkCqs6uYKd6M0ySqSAJ_bwgBf_7qBUWzKsfvR1j1P0UEUdmeZnqol7mF009wziNl8cQuPGg4oXyCo2RT6t7SXykT0-zFY_DtEr8ZFM7LVH_CFZt-xSfq4AaqhCyWKM"/>
+</div>
+</div>
+</div>
+<!-- Service 2: Conceptual -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter items-center">
+<div class="md:col-span-6 md:col-start-1">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img alt="Conceptual creative shoot" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="An artistic, conceptual still-life photography composition featuring luxury skincare bottles arranged on minimal, geometric beige pedestals. The lighting is dramatic and directional, creating sharp, stark shadows that add depth and mood. The aesthetic is highly editorial and high-end, utilizing a sophisticated palette of warm off-whites, muted sand tones, and deep shadows, conveying a sense of premium brand storytelling and meticulous set design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtAric4YbwksApV30Izw6OnGY5R9JapJ7ciss73EqQmlP9BBk9gSLs9g9KkRTWdaCv3ugc3yHjlJ-oqe9z8RG4VhIVADF2sFYrVXQQtyUKPU91rAdym0MJ7_UTC75P-26GPs3PDCuVd7qZWmT5qb62k0bXqlp8Qikp5A2Q1yqni0duK_PcUqard2OkGtZk-pJKTymkezFTaEuT7zJw_g2y4jXVyxSM6BLdhaVIY77D3Wb-FXlKVlEP4Cz_6iM75Ci80XG__D0i6Ps"/>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 space-y-6">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">02</span>
+<h2 class="font-headline-md text-headline-md text-primary">Conceptual &amp; Creative Shoots</h2>
+<p class="font-body-md text-body-md text-secondary">
+                        Elevate your brand identity with artistic storytelling. We provide comprehensive art direction, unique lighting setups, and custom set designs to create striking, memorable imagery that sets your brand apart.
+                    </p>
+<ul class="space-y-3 pt-4 border-t border-outline-variant/30">
+<li class="flex items-center text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">check</span> Full Art Direction
+                        </li>
+<li class="flex items-center text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">check</span> Custom Set Construction
+                        </li>
+<li class="flex items-center text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">check</span> Advanced Lighting Techniques
+                        </li>
+</ul>
+</div>
+</div>
+<!-- Service 3: Model & Apparel -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter items-center">
+<div class="md:col-span-5 md:col-start-1 space-y-6 order-2 md:order-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">03</span>
+<h2 class="font-headline-md text-headline-md text-primary">Model &amp; Apparel Shoots</h2>
+<p class="font-body-md text-body-md text-secondary">
+                        Complete lookbook and campaign productions. We handle all aspects including professional model sourcing, styling, and hair &amp; makeup coordination, available both in our studio or on-location.
+                    </p>
+<ul class="space-y-3 pt-4 border-t border-outline-variant/30">
+<li class="flex items-center text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">check</span> Studio &amp; On-Location
+                        </li>
+<li class="flex items-center text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">check</span> Professional Styling
+                        </li>
+<li class="flex items-center text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">check</span> Hair &amp; Makeup Coordination
+                        </li>
+</ul>
+</div>
+<div class="md:col-span-6 md:col-start-7 order-1 md:order-2">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img alt="Model fashion photography" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A high-fashion editorial portrait of a model wearing minimalist, contemporary clothing, shot in a bright, airy studio environment. The lighting is soft and natural, creating a clean, sophisticated atmosphere typical of premium lookbooks. The image uses a muted, neutral color palette with emphasis on textures and subtle skin tones, reflecting a quiet, refined, and highly professional photographic approach." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEbqGmKJ0cwJwnAyHqXNfpeEvww0XH7hKi9eF3C2Z2Uax47iHHV-XVosRkSPgl_VJsP87whOYSMMc9FwDbgC2C4aOC-uWdTe9I1K92OLzx418j9L6zjkAA4oBvqOMu7jFBtCJPsQLDn_tEm3oT4w4_on7WaV3RqScPWfu8vbZiIZ2wi7VzXAVhZjOne33XrnPHwmM1KKW54aL9uBoT61urYdn_heeCbJuiL-mUHVZICy51piX5ICmuLukXloQFSKChJd1q80ux_SU"/>
+</div>
+</div>
+</div>
+<!-- Service 4: Marketplace -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter items-center">
+<div class="md:col-span-6 md:col-start-1">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container border border-outline-variant/20 p-8 flex items-center justify-center bg-surface-container-low">
+<img alt="Marketplace compliant photography" class="w-full h-full object-contain transition-transform duration-700 hover:scale-105" data-alt="A meticulously lit, perfectly centered red sneaker photographed against a flawless white background, specifically formatted for online marketplace cataloging. The image demonstrates technical perfection with edge-to-edge sharpness, accurate color representation, and zero distracting shadows. The visual aesthetic is highly utilitarian yet premium, emphasizing strict adherence to e-commerce technical specifications and clean, minimalist presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsVWmiNNAq5_UAR68Wvhk6c8uXzsIMM1ZlO15MBqqYpiE05z7Pl6fnqfjYQDMi4wus8Z1p7HfN7CIQHPKZUvcBSCqeM7vAoTmUAdP7hUTvQEHBphYszs8SkI3faDmOsx_aN3iIRXq7c67bB-LgE8FIfGop6tQ7iuF9C-Wg1_h1wyql3FH5vfAJYTLK6iaf8s4pmu0upY4EdZjZoHXkHSHXykwcqljd2szQoeg998hN9Aldx_wOIIaPby3KI22d6EfajPO1NVbisz0"/>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 space-y-6">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">04</span>
+<h2 class="font-headline-md text-headline-md text-primary">Marketplace Cataloging</h2>
+<p class="font-body-md text-body-md text-secondary">
+                        Navigating the complex technical requirements of various online marketplaces. We guarantee that your images meet all specific guidelines for cropping, margins, resolution, and file formats across all major platforms.
+                    </p>
+<ul class="space-y-3 pt-4 border-t border-outline-variant/30">
+<li class="flex items-center text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">check</span> Platform Guideline Compliance
+                        </li>
+<li class="flex items-center text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">check</span> Correct Aspect Ratios
+                        </li>
+<li class="flex items-center text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mr-3 text-sm">check</span> Multi-format Delivery
+                        </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Process Timeline -->
+<section class="w-full py-section-padding-desktop px-8 md:px-12 max-w-[1440px] mx-auto bg-surface-container-lowest border-t border-b border-outline-variant/20">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary">Our Process</h2>
+<p class="font-body-md text-body-md text-secondary mt-4 max-w-2xl mx-auto">A seamless, transparent workflow designed to deliver excellence from first contact to final delivery.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+<!-- Step 1 -->
+<div class="timeline-item relative flex flex-col items-center text-center">
+<div class="timeline-line w-full"></div>
+<div class="w-12 h-12 bg-surface border border-outline-variant rounded-full flex items-center justify-center z-10 mb-6 text-primary">
+<span class="font-label-sm text-label-sm">01</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-primary mb-2">Inquiry</h3>
+<p class="font-body-md text-body-md text-secondary px-4">Initial consultation to understand your brand guidelines, volume, and specific requirements.</p>
+</div>
+<!-- Step 2 -->
+<div class="timeline-item relative flex flex-col items-center text-center">
+<div class="timeline-line w-full"></div>
+<div class="w-12 h-12 bg-surface border border-outline-variant rounded-full flex items-center justify-center z-10 mb-6 text-primary">
+<span class="font-label-sm text-label-sm">02</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-primary mb-2">Shooting</h3>
+<p class="font-body-md text-body-md text-secondary px-4">Execution of the agreed creative brief with meticulous attention to detail and lighting.</p>
+</div>
+<!-- Step 3 -->
+<div class="timeline-item relative flex flex-col items-center text-center">
+<div class="timeline-line w-full"></div>
+<div class="w-12 h-12 bg-surface border border-outline-variant rounded-full flex items-center justify-center z-10 mb-6 text-primary">
+<span class="font-label-sm text-label-sm">03</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-primary mb-2">Post-Production</h3>
+<p class="font-body-md text-body-md text-secondary px-4">Rigorous retouching, color correction, and formatting to ensure flawless final output.</p>
+</div>
+<!-- Step 4 -->
+<div class="timeline-item relative flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-primary border border-primary rounded-full flex items-center justify-center z-10 mb-6 text-on-primary">
+<span class="font-label-sm text-label-sm">04</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-primary mb-2">Delivery</h3>
+<p class="font-body-md text-body-md text-secondary px-4">Secure transfer of high-resolution files, organized and formatted for immediate use.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="w-full py-section-padding-desktop px-8 md:px-12 max-w-[1440px] mx-auto text-center" id="book">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8">Start Your Project</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto mb-12">
+                Ready to elevate your brand's visual presence? Contact us to discuss your requirements and receive a custom proposal.
+            </p>
+<a class="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300" href="#">
+                Book a Consultation
+            </a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface-container-low border-t border-outline-variant/20 w-full py-section-padding-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter px-8 md:px-12 max-w-[1440px] mx-auto w-full">
+<div class="flex flex-col space-y-4">
+<span class="font-headline-md text-headline-md text-primary dark:text-on-primary">Sonika Studio</span>
+<p class="font-label-sm text-label-sm tracking-widest text-secondary dark:text-on-secondary-fixed-variant">
+                    © 2024 Sonika Professional Photography Studio. All rights reserved.
+                </p>
+</div>
+<div class="flex flex-col space-y-2 md:col-start-3 text-right">
+<a class="font-label-sm text-label-sm tracking-widest text-secondary dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-on-primary transition-colors underline" href="#">7210000220</a>
+<a class="font-label-sm text-label-sm tracking-widest text-secondary dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-on-primary transition-colors underline" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm tracking-widest text-secondary dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-on-primary transition-colors underline" href="#">YouTube</a>
+<a class="font-label-sm text-label-sm tracking-widest text-secondary dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-on-primary transition-colors underline" href="#">Quick Inquiry</a>
+</div>
+</div>
+</footer>
+</body></html>

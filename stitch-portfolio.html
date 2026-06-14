@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio - Sonika Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#1a1c1a",
+                    "on-surface": "#1b1c1c",
+                    "surface-dim": "#dbdad9",
+                    "outline": "#747878",
+                    "secondary-fixed": "#e6e2db",
+                    "error": "#ba1a1a",
+                    "primary": "#000000",
+                    "tertiary-fixed-dim": "#c7c6c4",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#c8c6c5",
+                    "error-container": "#ffdad6",
+                    "background": "#fbf9f9",
+                    "outline-variant": "#c4c7c7",
+                    "surface": "#fbf9f9",
+                    "surface-tint": "#5f5e5e",
+                    "on-primary-fixed": "#1c1b1b",
+                    "secondary": "#605e59",
+                    "primary-container": "#1c1b1b",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f5f3f3",
+                    "on-surface-variant": "#444748",
+                    "tertiary-container": "#1a1c1a",
+                    "on-secondary-container": "#64625d",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#000000",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "tertiary-fixed": "#e3e2e0",
+                    "surface-container-highest": "#e3e2e2",
+                    "on-tertiary-fixed-variant": "#464745",
+                    "surface-container": "#efeded",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-secondary-fixed": "#1c1c17",
+                    "on-background": "#1b1c1c",
+                    "primary-fixed": "#e5e2e1",
+                    "on-primary-container": "#858383",
+                    "surface-variant": "#e3e2e2",
+                    "secondary-container": "#e3dfd8",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e9e8e7",
+                    "secondary-fixed-dim": "#cac6bf",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#303031",
+                    "surface-bright": "#fbf9f9",
+                    "on-tertiary-container": "#848482",
+                    "on-secondary-fixed-variant": "#484742"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding-mobile": "64px",
+                    "grid-gutter": "24px",
+                    "container-max-width": "1440px",
+                    "base": "8px",
+                    "section-padding-desktop": "120px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                    "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                    "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                    "body-lg": ["18px", { "lineHeight": "1.8", "fontWeight": "400" }],
+                    "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                    "headline-md": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                    "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+        .image-hover-wrapper {
+            overflow: hidden;
+        }
+        .image-hover-wrapper img {
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .image-hover-wrapper:hover img {
+            transform: scale(1.05);
+        }
+        .filter-tab.active {
+            border-bottom: 1px solid #000000;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full h-20 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center px-8 md:px-12 max-w-[1440px] mx-auto w-full z-50">
+<div class="font-headline-sm text-headline-sm tracking-tighter text-primary">
+            Sonika Studio
+        </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md uppercase tracking-widest text-secondary hover:text-primary transition-colors hover:opacity-70 duration-300" href="#">Home</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-primary font-bold border-b border-primary hover:opacity-70 transition-opacity duration-300" href="#">Portfolio</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-secondary hover:text-primary transition-colors hover:opacity-70 duration-300" href="#">Services</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-secondary hover:text-primary transition-colors hover:opacity-70 duration-300" href="#">About</a>
+</nav>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300 hidden md:block">
+            Book Now
+        </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</header>
+<main class="pt-[120px] pb-section-padding-desktop min-h-screen">
+<!-- Page Header -->
+<section class="max-w-container-max-width mx-auto px-4 md:px-12 mb-16 text-center">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Portfolio Gallery</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto mb-12">A curated selection of our finest work across e-commerce, creative campaigns, and catalog photography. Each image is a testament to minimal precision.</p>
+<!-- Filters -->
+<div class="flex flex-wrap justify-center gap-6 md:gap-8 font-label-sm text-label-sm uppercase tracking-widest text-secondary">
+<button class="filter-tab active text-primary pb-1 transition-colors duration-300">All</button>
+<button class="filter-tab pb-1 hover:text-primary transition-colors duration-300">E-commerce</button>
+<button class="filter-tab pb-1 hover:text-primary transition-colors duration-300">Creative</button>
+<button class="filter-tab pb-1 hover:text-primary transition-colors duration-300">Model</button>
+<button class="filter-tab pb-1 hover:text-primary transition-colors duration-300">Catalog</button>
+</div>
+</section>
+<!-- Masonry Gallery -->
+<section class="max-w-container-max-width mx-auto px-4 md:px-8">
+<div class="masonry-grid">
+<!-- Item 1 -->
+<div class="masonry-item relative group image-hover-wrapper bg-white border border-outline-variant/30">
+<img alt="E-commerce watch photography" class="w-full h-auto block object-cover" data-alt="A highly detailed, minimalist e-commerce product photograph of a modern, sleek smartwatch resting on a stark white pedestal. The lighting is bright, high-key studio lighting with soft, diffused shadows, creating a pristine light-mode aesthetic. The background is a seamless, pure white void, emphasizing the sharp charcoal black and silver details of the watch. The overall mood is luxurious, quiet, and precise, aligning perfectly with a premium, editorial design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4T1mwqcgmqaz7apDdUILyiJSCW_cirlyUFPBam4hwMo2F1kv9-jkHt7WKEFIlFbp3T0o8EfxEwF7V9HfhJFC838KC7-MoLq-lMO6kF6xUxYEkX9Wlk843BQVsY8leQc_AgvmLk-gtgkgAq8fjBd1sM2aB5AOLAWQGuPrhEL2j6m35I2Can5wAjlc5dvtVb-znYsti0LFiEPgCnByCHKnANRkjwLaJSqNMc44AQMq5tOxozCqRjYW7O6hWOFnuqQI6vBxYaleRtbY"/>
+<div class="absolute inset-0 bg-surface/0 group-hover:bg-surface/20 transition-colors duration-300 flex items-end p-6 opacity-0 group-hover:opacity-100">
+<div class="bg-surface/90 backdrop-blur-sm p-4 w-full border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-1">E-commerce</span>
+<span class="font-body-md text-body-md text-primary font-medium cursor-pointer hover:underline">View Project</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="masonry-item relative group image-hover-wrapper bg-white border border-outline-variant/30">
+<img alt="Creative headphones shot" class="w-full h-auto block object-cover aspect-[3/4]" data-alt="An editorial, minimalist creative product photograph of high-end over-ear headphones. The headphones are floating slightly above a soft, off-white (#FAF9F6) textured surface. The lighting is dramatic yet soft, casting long, elegant shadows that add depth without heavy contrast. The color palette is strictly neutral, focusing on charcoal, silver, and warm white. The aesthetic is sophisticated, intentional, and highly polished, suitable for a luxury gallery presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe1AVsQIa3WRVjQFOPPqx9_0LHEGOCE15AkuFsZzXn-M8V3eJAfMQCnjL-uLc7pvV21J6UcSXd92pn8fhD1JJzoXWUrUxO7SKGDOyVwU2L30AanjiygKOi1yDdKftjJg8mKv5VZFF9CpiXtOmODt_P5pMUJyP6mI05spotfaYL32eXM1eL_3WZDCqn-9WfrDsfs_Bm3PNZGj_yUM3NbdiYUx2mU8P9IktqmrJ9dOyhVZjbuNoUlNMwui3fCyWBxhpryw3CRdPbLw8"/>
+<div class="absolute inset-0 bg-surface/0 group-hover:bg-surface/20 transition-colors duration-300 flex items-end p-6 opacity-0 group-hover:opacity-100">
+<div class="bg-surface/90 backdrop-blur-sm p-4 w-full border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-1">Creative</span>
+<span class="font-body-md text-body-md text-primary font-medium cursor-pointer hover:underline">View Project</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="masonry-item relative group image-hover-wrapper bg-white border border-outline-variant/30">
+<img alt="Catalog shoe photography" class="w-full h-auto block object-cover aspect-square" data-alt="A clean, minimalist catalog photograph of a single, vibrant red sneaker placed symmetrically against a soft gray-white gradient background. The lighting is impeccably even, eliminating harsh shadows to highlight the shoe's texture and silhouette. The composition utilizes vast negative space around the subject, creating a sense of breathing room and premium editorial design. The overall feel is modern, vibrant yet restrained by the stark, quiet environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBboQQ0ksXEko9Sa_SsFIp_WHLEAJhhg-415XssOqP7XDQhixuhmnU3txqAN-VZZTj3Q-EAl7QOClb9axW7USVOqPYH6lub8aGMhPDKa_bkMJb4gecEIyKIWf-y2Ipwwj4Jmp5OFwWpyZ7n90t7YUgWs1GceWd91pC79-4i9E-Ru7RX83VdOzMXEUjEvIrK1lIVhiO5V13y1NNJd6z5rQcqgmazOoAdMgDGEFzElPTBWTkSm6nTzpZF3sGSr65e3kq9Uk2CItYG-Tc"/>
+<div class="absolute inset-0 bg-surface/0 group-hover:bg-surface/20 transition-colors duration-300 flex items-end p-6 opacity-0 group-hover:opacity-100">
+<div class="bg-surface/90 backdrop-blur-sm p-4 w-full border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-1">Catalog</span>
+<span class="font-body-md text-body-md text-primary font-medium cursor-pointer hover:underline">View Project</span>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="masonry-item relative group image-hover-wrapper bg-white border border-outline-variant/30">
+<img alt="Model fashion photography" class="w-full h-auto block object-cover aspect-[4/5]" data-alt="A sophisticated editorial fashion portrait of a female model wearing minimalist, structured clothing in monochromatic tones. She is posed elegantly against a very light, warm-toned beige wall. The natural lighting is soft and diffused, creating gentle, low-contrast shadows that flatter the subject. The image is cropped to emphasize the texture of the garments and the quiet, intentional mood of the shoot. The style reflects a luxury, minimalist brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDklMDtQ3ycrrdZUe8OYLI4a9ggpPyqmtTLT9VlwAID4iTc9V-bAcG04e3oFQtXOHpPVGmBbg1Uq9ESU7Wtu_oshmcIlMC6g-ANAk1ASsvC0eM2e8WMO79I_0Kdc9TkXWis3musTagcKEn-u0ww11Fuy49QQtLSGULV--9Rll5IBmqpSGgrM-rDmlMYQTpT0CEMqP7G3mWUmJXtrkO_pWnjvG4NG2m6R0EcaMVLueAr4PV7QQI7Fg2LLxwoGyIt700tHABbncwptaE"/>
+<div class="absolute inset-0 bg-surface/0 group-hover:bg-surface/20 transition-colors duration-300 flex items-end p-6 opacity-0 group-hover:opacity-100">
+<div class="bg-surface/90 backdrop-blur-sm p-4 w-full border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-1">Model</span>
+<span class="font-body-md text-body-md text-primary font-medium cursor-pointer hover:underline">View Project</span>
+</div>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="masonry-item relative group image-hover-wrapper bg-white border border-outline-variant/30">
+<img alt="E-commerce perfume photography" class="w-full h-auto block object-cover aspect-[3/2]" data-alt="A high-end, minimalist e-commerce still life of a sleek glass perfume bottle. The bottle is positioned on a subtle, frosted glass plinth over a pale, warm off-white surface. Soft, directional light passes through the glass, creating delicate, glowing refractions and a subtle charcoal shadow. The composition is highly intentional, utilizing significant negative space to elevate the perceived value of the product. The mood is calm, luxurious, and pristine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbbkoprrCWRVa_T8a7w2vC6zIUMyN6_QB-GEa2yR2uUiTQUw2G-h4oZaSguTPZ6uxtQbflhj3f-DdAIJfdxxeNrnG5C_-vT-qbPCXIoao9x0ajakDj2-2m3O9HB_sfdDKbzYMTsl3Vj1duDYgGTEnXwQ-bc5oEZw-8l8ruf1mYkPqTG1rZfQ0KlKj-HKX2P1d58cPAr-maV0JrZo-z5Exwqi6p5DxU859Dx5ZIQCx3GGN-Nbw7kNL4BlZeOr6D5VGr0jN6H8Pga2Q"/>
+<div class="absolute inset-0 bg-surface/0 group-hover:bg-surface/20 transition-colors duration-300 flex items-end p-6 opacity-0 group-hover:opacity-100">
+<div class="bg-surface/90 backdrop-blur-sm p-4 w-full border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-1">E-commerce</span>
+<span class="font-body-md text-body-md text-primary font-medium cursor-pointer hover:underline">View Project</span>
+</div>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="masonry-item relative group image-hover-wrapper bg-white border border-outline-variant/30">
+<img alt="Creative lifestyle product shot" class="w-full h-auto block object-cover aspect-[4/3]" data-alt="A minimalist, editorial lifestyle product photograph featuring a sleek black modern object resting on a smooth, matte white desk surface next to a delicate shadow cast by an unseen architectural element. The lighting is bright, high-key, and natural, evoking an airy, spacious environment. The color palette is restricted to soft whites, cool grays, and deep blacks. The image is an exercise in restraint, framing, and precise composition, fitting for a sophisticated studio gallery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdG9qDe-nMigN-NBxnR-rQ4qLB-k9rKGg-xGfVYV3sOWOL8Ml33F1-bkTzuroRl3gIvNAiOAYAu-k93A6XaKXxNvjoM3Emyr5sTKQDjEM7p8BdOUSx_jHQtJSXdV6mkK1S-OsPuApmgisG2sfD1hptcGCBZ9a2iIW4goHBu69kDPsf7sqgzp3b2--Otgti080k65dE09yVYXygRhuMblt0oKqRQCPg2UXIuTpp4RDjVdncLPzcfPlnkZDMIVZFNYotbs-X6fe8vq0"/>
+<div class="absolute inset-0 bg-surface/0 group-hover:bg-surface/20 transition-colors duration-300 flex items-end p-6 opacity-0 group-hover:opacity-100">
+<div class="bg-surface/90 backdrop-blur-sm p-4 w-full border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-1">Creative</span>
+<span class="font-body-md text-body-md text-primary font-medium cursor-pointer hover:underline">View Project</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<div class="flex justify-center mt-16">
+<button class="bg-transparent border border-primary text-primary px-8 py-3 font-label-sm text-label-sm uppercase tracking-widest hover:bg-surface-container-low transition-colors duration-300">
+                    Load More Projects
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding-desktop border-t border-outline-variant/20 bg-surface">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter px-8 md:px-12 max-w-[1440px] mx-auto w-full">
+<div class="font-headline-md text-headline-md text-primary mb-6 md:mb-0">
+                Sonika Studio
+            </div>
+<div class="flex flex-col gap-4 font-label-sm text-label-sm tracking-widest text-secondary md:col-span-1 justify-center md:items-center">
+<a class="hover:text-primary transition-colors hover:underline" href="#">7210000220</a>
+<a class="hover:text-primary transition-colors hover:underline" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors hover:underline" href="#">YouTube</a>
+<a class="hover:text-primary transition-colors hover:underline" href="#">Quick Inquiry</a>
+</div>
+<div class="font-label-sm text-label-sm tracking-widest text-secondary md:text-right flex items-end md:justify-end mt-8 md:mt-0">
+                © 2024 Sonika Professional Photography Studio. All rights reserved.
+            </div>
+</div>
+</footer>
+<script>
+        // Simple filter tab interaction logic
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-tab').forEach(t => {
+                    t.classList.remove('active', 'text-primary', 'font-bold');
+                    t.classList.add('hover:text-primary');
+                });
+                e.target.classList.add('active', 'text-primary', 'font-bold');
+                e.target.classList.remove('hover:text-primary');
+            });
+        });
+    </script>
+</body></html>
