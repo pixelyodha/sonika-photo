@@ -23,7 +23,7 @@ const Contact = () => {
     const { name, email, phone, project_type, message } = formData;
     
     // Construct WhatsApp message
-    const whatsappMessage = `Hello Sonika Studio, I have a new inquiry!
+    const whatsappMessage = `Hello Studio, I have a new inquiry!
 
 *Name:* ${name}
 *Email:* ${email}
@@ -34,7 +34,7 @@ const Contact = () => {
 ${message}`;
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappNumber = '917210000220'; // Assuming +91 is standard here as the placeholder says +91
+    const whatsappNumber = '917827043420'; // Assuming +91 is standard here as the placeholder says +91
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
@@ -54,9 +54,9 @@ ${message}`;
             <div className="space-y-8">
               <div>
                 <p className="font-label-sm text-label-sm tracking-widest text-outline mb-2">DIRECT LINE</p>
-                <a className="font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors flex items-center gap-3" href="tel:7210000220">
+                <a className="font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors flex items-center gap-3" href="tel:7827043420">
                   <span className="material-symbols-outlined text-[24px]">call</span>
-                  7210000220
+                  7827043420
                 </a>
               </div>
               <div>

@@ -22,7 +22,7 @@ const Navbar = () => {
       id="main-nav"
     >
       <Link className="font-headline-sm text-headline-sm tracking-tighter text-primary dark:text-on-primary" to="/">
-        Sonika Studio
+        Studio
       </Link>
       {/* Desktop Nav */}
       <nav className="hidden md:flex items-center space-x-8">
@@ -33,7 +33,7 @@ const Navbar = () => {
       </nav>
       <div className="flex items-center space-x-4">
         <button className="bg-primary text-on-primary px-6 py-3 rounded-none font-label-sm text-label-sm uppercase tracking-widest hover:opacity-90 transition-opacity">
-          <a href="https://wa.me/7210000220" target="_blank" rel="noopener noreferrer">Book Now</a>
+          <a href="https://wa.me/7827043420" target="_blank" rel="noopener noreferrer">Book Now</a>
         </button>
         {/* Mobile Menu Toggle */}
         <button aria-label="Open menu" className="md:hidden text-primary">

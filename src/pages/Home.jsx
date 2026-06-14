@@ -19,7 +19,7 @@ const Home = () => {
         {/* Hero Content */}
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
           <span className="font-label-sm text-label-sm uppercase tracking-[0.2em] text-primary mb-6 block border border-primary/20 px-4 py-2 bg-surface/50 backdrop-blur-sm">
-            Sonika Professional Photography
+            Professional Photography
           </span>
           <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 text-shadow-subtle leading-tight">
             Product Photography <br />
@@ -159,7 +159,7 @@ const Home = () => {
           <div className="min-w-[300px] md:min-w-[400px] flex-shrink-0 snap-center bg-surface p-8 border border-outline-variant/30 relative">
             <div className="absolute top-0 left-0 w-1 h-full bg-primary/10"></div>
             <p className="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
-              "The conceptual shoot Sonika Studio delivered elevated our entire brand identity. The attention to negative space and lighting was exactly what our minimalist skincare line needed."
+              "The conceptual shoot Studio delivered elevated our entire brand identity. The attention to negative space and lighting was exactly what our minimalist skincare line needed."
             </p>
             <div>
               <p className="font-label-sm text-label-sm text-primary uppercase tracking-wider mb-1">Aura Botanics</p>

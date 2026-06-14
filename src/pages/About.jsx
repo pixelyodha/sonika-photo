@@ -12,7 +12,7 @@ const About = () => {
               Precision &amp; Artistry in Every Frame.
             </h1>
             <p className="font-body-lg text-body-lg text-secondary">
-              Based in Gurgaon, Sonika Studio is a premium commercial photography space dedicated to elevating brands. Specializing in high-end e-commerce, editorial, and product photography for industry leaders like Myntra, Amazon, and Flipkart. We don't just capture images; we craft visual narratives that sell.
+              Based in Gurgaon, Studio is a premium commercial photography space dedicated to elevating brands. Specializing in high-end e-commerce, editorial, and product photography for industry leaders like Myntra, Amazon, and Flipkart. We don't just capture images; we craft visual narratives that sell.
             </p>
             <div className="flex gap-4">
               <Link
